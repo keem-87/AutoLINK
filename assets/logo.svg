@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="#7AA95C" />
+  <!-- House outline -->
+  <path d="M30 65 L60 40 L90 65 V95 H65 V70 H55 V95 H30 Z" fill="#F5E8C7" stroke="#1F2A44" stroke-width="2" />
+  <!-- Paw print: large pad -->
+  <circle cx="60" cy="80" r="12" fill="#F26B62" />
+  <!-- Paw print: toes -->
+  <circle cx="45" cy="65" r="5" fill="#F26B62" />
+  <circle cx="75" cy="65" r="5" fill="#F26B62" />
+  <circle cx="52" cy="58" r="4" fill="#F26B62" />
+  <circle cx="68" cy="58" r="4" fill="#F26B62" />
+</svg>
