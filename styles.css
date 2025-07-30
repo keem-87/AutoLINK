@@ -1,0 +1,276 @@
+/*
+ * Stylesheet for The Shelter‑Stead website.
+ *
+ * Colour palette:
+ *   --color-primary: #7AA95C (earthy green)
+ *   --color-secondary: #F5E8C7 (warm beige)
+ *   --color-accent: #F26B62 (coral)
+ *   --color-dark: #1F2A44 (deep navy)
+ */
+
+:root {
+  --color-primary: #7AA95C;
+  --color-secondary: #F5E8C7;
+  --color-accent: #F26B62;
+  --color-dark: #1F2A44;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-dark);
+  background-color: var(--color-secondary);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Hero / Header */
+.hero {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.hero-text h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text .tagline {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--color-accent), 10%);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-dark);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0.5rem 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-accent);
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
+}
+
+.about-section {
+  text-align: center;
+}
+
+.about-section h2,
+.services-section h2,
+.rates-section h2,
+.contact-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+/* Services */
+.services-section {
+  background-color: var(--color-secondary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+/* Rates table */
+.rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rates-table th,
+.rates-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.rates-table th {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.rates-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Contact section */
+.contact-section {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 480px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  color: var(--color-dark);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+
+.contact-form button {
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d85751;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-dark);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-grid {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
