@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shelter‑Stead</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Use a Google Font for a friendly, modern appearance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="container header-content">
+            <img src="assets/logo.svg" alt="The Shelter‑Stead logo" class="logo" />
+            <div class="hero-text">
+                <h1>The Shelter‑Stead</h1>
+                <p class="tagline">Guided by Instinct. Grounded in Discipline.</p>
+                <a href="#contact" class="btn-primary">Book a Meet &amp; Greet</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#rates">Rates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="about-section container">
+            <h2>About Us</h2>
+            <p>The Shelter‑Stead provides a safe, engaging and enriching home‑away‑from‑home where pets thrive through positive reinforcement (R+) training and compassionate care.  We’re committed to small staff‑to‑pet ratios, daily progress reports and science‑based methods that respect each pet’s individuality.</p>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Dog Boarding</h3>
+                        <p>Overnight stays in comfy suites with daily playtime, enrichment and cuddle sessions.  Includes photo updates to keep you connected.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Cat Boarding</h3>
+                        <p>Quiet, private condos with enrichment toys and climbing perches.  We provide the purrfect mix of play and relaxation.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Daycare &amp; Play</h3>
+                        <p>Structured daycare programs separated by size and energy level.  Includes indoor/outdoor play, puzzle time and rest breaks.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Training Programs</h3>
+                        <p>Group classes, private lessons and board‑and‑train programs using R+ techniques.  Designed to enhance the bond between you and your pet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rates" class="rates-section container">
+            <h2>Rates</h2>
+            <p>Our pricing is structured to offer premium care at competitive rates.  Multi‑pet and multi‑service discounts are available.</p>
+            <table class="rates-table">
+                <thead>
+                    <tr><th>Service</th><th>Price</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Dog Boarding (First Dog)</td><td>$48 / night</td><td>Includes daycare &amp; enrichment</td></tr>
+                    <tr><td>Dog Boarding (Additional Dog)</td><td>30% off</td><td>Discount for dogs from same household</td></tr>
+                    <tr><td>Cat Boarding (First Cat)</td><td>$24 / night</td><td>Private condo with daily enrichment</td></tr>
+                    <tr><td>Cat Boarding (Additional Cat)</td><td>$16 / night</td><td>30% discount for same lodging</td></tr>
+                    <tr><td>Daycare (Full Day)</td><td>$27</td><td>5+ hours; half‑day $20</td></tr>
+                    <tr><td>House Sitting</td><td>$65 / night</td><td>In your home; includes walks &amp; plant care</td></tr>
+                    <tr><td>Drop‑in Visits</td><td>$20 / 30 min</td><td>Quick potty break &amp; feeding</td></tr>
+                    <tr><td>Dog Walking</td><td>$22 / 30 min</td><td>Package of 5 for $100</td></tr>
+                    <tr><td>Group Training Class</td><td>$160 / 6 weeks</td><td>Max 5 dogs; R+ methods</td></tr>
+                    <tr><td>Private Training</td><td>$65 / hour</td><td>5‑pack $300</td></tr>
+                    <tr><td>Board &amp; Train</td><td>$2,200 / 3 weeks</td><td>Personalized R+ curriculum</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>Ready to book or have questions?  We’d love to hear from you!  Please fill out the form or reach us via email. </p>
+                    <ul>
+                        <li>Email: <a href="mailto:theshelterstead@gmail.com">theshelterstead@gmail.com</a></li>
+                        <li>Phone: (555) 123‑4567</li>
+                        <li>Location: Middletown, Delaware</li>
+                    </ul>
+                </div>
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Shelter‑Stead.  All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
