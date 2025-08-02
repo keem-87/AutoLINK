@@ -1,0 +1,37 @@
+import React from 'react';
+import Navbar from '../Navbarjs';
+import BookingForm from 'react-booking-form';
+
+/**
+ * BookingFormjs component uses the open-source react-booking-form library (MIT licensed)
+ * to render a booking form for The Shelter-Stead. Users can select dates and provide
+ * booking details. On submission, the form data is logged and an alert indicates success.
+ *
+ * In a production system, handle the form submission by sending the data to the backend
+ * API (e.g., /api/book) via Axios. Never store sensitive information on the client.
+ */
+const BookingFormjs = () => {
+  // Handler triggered when booking form is submitted
+  const handleBookingSubmit = (data) => {
+    // TODO: connect to backend: axios.post('/api/book', data);
+    console.log('Booking data:', data);
+    alert('Thank you for your booking request! We will contact you soon.');
+  };
+
+  return (
+    <>
+      <Navbar />
+      <div className="booking-form-container" style={{ padding: '2rem' }}>
+        <h2>Book Your Pet's Stay</h2>
+        <BookingForm
+          primaryColor="#004B23"
+          secondaryColor="#D8B4A0"
+          // This onSubmit prop receives the form data object
+          onSubmit={handleBookingSubmit}
+        />
+      </div>
+    </>
+  );
+};
+
+export default BookingFormjs;
