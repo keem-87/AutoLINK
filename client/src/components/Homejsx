@@ -1,25 +1,29 @@
 // Home component for public landing page.
-// Displays general information about The Shelter-Stead and links to login/register.
-// In future versions, this component may call the backend to list available services.
+// Displays general information about The Shelter-Stead and links to register/login.
+// In future versions, this component may call out the backend to list available services.
 // Do not store any secret information or keys here.
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbarjs';
 
 const Home = () => {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Welcome to The Shelter‑Stead</h1>
-      <p>
-        We provide premium pet boarding, training, and care services. This page is part of
-        the React frontend of our MERN stack. In production, you might call the backend to
-        fetch dynamic service offerings and testimonials.
-      </p>
-      <p>
-        New here? <Link to="/register">Register</Link> or{' '}
-        <Link to="/login">Login</Link> to manage your bookings.
-      </p>
-    </div>
+    <>
+      <Navbar />
+      <div style={{ padding: '2rem' }}>
+        <h1>Welcome to The Shelter-Stead</h1>
+        <p>
+          We provide premium pet boarding, training, and care services. This page is part of
+          the React frontend of our MERN stack. In production, you might call the backend to
+          fetch dynamic service offerings and testimonials.
+        </p>
+        <p>
+          New here? <Link to="/register">Register</Link> or{' '}
+          <Link to="/login">Login</Link> to manage your bookings.
+        </p>
+      </div>
+    </>
   );
 };
 
