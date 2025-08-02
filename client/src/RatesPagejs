@@ -1,0 +1,14 @@
+import React from 'react';
+import Navbar from "./Navbarjs";
+import Rates from "./components/Ratesjs";
+
+const RatesPage = () => {
+  return (
+    <React.Fragment>
+      <Navbar />
+      <Rates />
+    </React.Fragment>
+  );
+};
+
+export default RatesPage;
