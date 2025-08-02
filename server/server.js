@@ -6,7 +6,10 @@ const bcrypt = require('bcryptjs');
 const speakeasy = require('speakeasy');
 const jwt = require('jsonwebtoken');
 const Stripe = require('stripe');
-
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+const mongoSanitize = require('express-mongo-sanitize');
+const sanitizeHtml = require('sanitize-html');
 /*
  * Shelter‑Stead XaaS backend
  *
@@ -28,7 +31,21 @@ const Stripe = require('stripe');
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use(helmet()); // sets secure HTTP headers
+app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 })); // rate limiter
+app.use(mongoSanitize()); // prevents Mongo injection
+// Input sanitization example
+function sanitizeInput(req, res, next) {
+  Object.keys(req.body).forEach(key => {
+    req.body[key] = sanitizeHtml(req.body[key]);
+  });
+  next();
+}
+app.use(express.json(), sanitizeInput);
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Internal server error' });
+});
 // Initialise Stripe with your secret key (see .env.example for details)
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder');
 
