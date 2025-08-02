@@ -1,0 +1,48 @@
+import React from 'react';
+import Navbar from '../Navbarjs';
+
+/**
+ * Rates component displays current pricing for The Shelter-Stead's services.
+ * Rates are defined based on local market research and may be updated.
+ * In a future version, these values could be fetched from the backend (MongoDB).
+ */
+const Ratesjs = () => {
+  const rates = [
+    { service: 'Dog Boarding (per night)', price: '$48' },
+    { service: 'Additional Dog', price: '+$28' },
+    { service: 'Cat Boarding (per night)', price: '$25' },
+    { service: 'Dog Daycare (per day)', price: '$30' },
+    { service: 'Training Session (45 min)', price: '$60' }
+  ];
+
+  return (
+    <>
+      <Navbar />
+      <div className="rates-container" style={{ padding: '2rem' }}>
+        <h2>Service Rates</h2>
+        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <thead>
+            <tr>
+              <th style={{ textAlign: 'left', padding: '0.5rem' }}>Service</th>
+              <th style={{ textAlign: 'left', padding: '0.5rem' }}>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rates.map((item, index) => (
+              <tr key={index}>
+                <td style={{ padding: '0.5rem', borderTop: '1px solid #ddd' }}>
+                  {item.service}
+                </td>
+                <td style={{ padding: '0.5rem', borderTop: '1px solid #ddd' }}>
+                  {item.price}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+};
+
+export default Ratesjs;
