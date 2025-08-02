@@ -1,0 +1,14 @@
+import React from 'react';
+import Navbar from './Navbarjs';
+import Login from './components/Login';
+
+function LoginPage() {
+  return (
+    <>
+      <Navbar />
+      <Login />
+    </>
+  );
+}
+
+export default LoginPage;
