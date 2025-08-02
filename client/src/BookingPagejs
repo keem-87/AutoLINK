@@ -1,0 +1,14 @@
+import React from 'react';
+import Navbar from "./Navbarjs";import Navbar from './Navbarjs';
+import BookingForm from "./components/BookingFormjs";
+
+const BookingPage = () => {
+  return (
+    <React.Fragment>
+      <Navbar />
+      <BookingForm />
+    </React.Fragment>
+  );
+};
+
+export default BookingPage;
