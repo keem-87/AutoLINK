@@ -12,9 +12,8 @@ function Navbar() {
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/register">Register</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        {/* Placeholder for future navigation items (booking, profile, admin) */}
-      </ul>
+                <li><Link to="/booking">Booking</Link></li>
+        <li><Link to="/rates">Rates</Link></li>
     </nav>
   );
 }
