@@ -1,152 +1,132 @@
-AutoLINK is a MERN stack (MongoDB, Express.js, React, Node.js) project designed to automate website infrastructure, security pipelines, and business/marketing operations through an integrated CI/CD workflow.
+# AutoLINK
 
-The platform incorporates AI-driven automation for building, deploying, and managing a modern web application with scalability, security, and operational efficiency in mind. It is built with professional development methodologies, ensuring that the system is modular, maintainable, and ready for production.
+AutoLINK is a MERN stack (MongoDB, Express.js, React, Node.js) project designed to automate website infrastructure, security pipelines, and business/marketing operations through an integrated CI/CD workflow. The platform incorporates AI-driven automation for building, deploying, and managing a modern web application with scalability, security, and operational efficiency in mind. It is built with professional development methodologies, ensuring that the system is modular, maintainable, and ready for production.
 
-📌 Purpose
+## 📌 Purpose
+
 The primary goal of AutoLINK is to:
 
-Automate business workflows such as website content updates, marketing campaign scheduling, and analytics-based adjustments.
+- Automate business workflows such as website content updates, marketing campaign scheduling, and analytics-based adjustments.
+- Integrate security pipelines directly into the CI/CD process for continuous monitoring and compliance enforcement.
+- Provide a flexible, scalable infrastructure that supports future feature expansion and integrates with hosting services like Sevalla.
+- Enable AI-assisted development for intelligent deployment management, automated testing, and anomaly detection.
 
-Integrate security pipelines directly into the CI/CD process for continuous monitoring and compliance enforcement.
+## 🚀 Features
 
-Provide a flexible, scalable infrastructure that supports future feature expansion and integrates with hosting services like Sevalla.
+**MERN Stack Architecture**
 
-Enable AI-assisted development for intelligent deployment management, automated testing, and anomaly detection.
+- **MongoDB** for scalable database storage.
+- **Express.js** for backend API services.
+- **React** for dynamic, responsive UI.
+- **Node.js** for server-side logic and integration.
 
-🚀 Features
-MERN Stack Architecture
+**AI-Augmented CI/CD**
 
-MongoDB for scalable database storage.
+- Automated builds and deployments via GitHub Actions and Sevalla.
+- Security-as-Code with continuous vulnerability scanning.
+- Real-time deployment health checks.
 
-Express.js for backend API services.
+**Scalability and Performance**
 
-React for dynamic, responsive UI.
+- Microservice-ready backend.
+- Containerization support (Docker/Kubernetes-ready).
+- Load balancing algorithms for optimized performance.
 
-Node.js for server-side logic and integration.
+**Security Integration**
 
+- AI-based anomaly detection.
+- Role-based authentication (with optional 2FA).
+- Secure API key management.
 
-AI-Augmented CI/CD
+**Business and Marketing Automation**
 
-Automated builds and deployments via GitHub Actions and Sevalla.
+- Social media posting scheduler.
+- Analytics-driven campaign triggers.
+- CRM integration ready.
 
-Security-as-Code with continuous vulnerability scanning.
+## 🛠️ Tech Stack
 
-Real-time deployment health checks.
+| Technology   | Purpose              |
+|--------------|----------------------|
+| MongoDB      | Database             |
+| Express.js   | Backend API          |
+| React        | Frontend UI          |
+| Node.js      | Server runtime       |
+| GitHub Actions | CI/CD pipeline     |
+| Sevalla Hosting | Deployment environment |
+| Docker (optional) | Containerization |
+| OpenAI API (optional) | AI automation & NLP |
 
+## 📂 Project Structure
 
-Scalability and Performance
-
-Microservice-ready backend.
-
-Load balancing algorithms for optimized performance.
-
-Containerization support (Docker/Kubernetes ready).
-
-
-Security Integration
-
-AI-based anomaly detection.
-
-Role-based authentication (future 2FA support).
-
-Secure API key management.
-
-
-Business/Marketing Automation
-
-Social media posting scheduler.
-
-Analytics-driven campaign triggers.
-
-CRM integration ready.
-
-🛠️ Tech Stack
-Technology	Purpose
-MongoDB	Database
-Express.js	Backend API
-React	Frontend UI
-Node.js	Server runtime
-GitHub Actions	CI/CD pipeline
-Sevalla Hosting	Deployment environment
-Docker (optional)	Containerization
-OpenAI API (optional)	AI automation & NLP
-
-📂 Project Structure
-pgsql
-Copy
-Edit
+```
 AutoLINK/
-│
 ├── client/               # React frontend
 │   ├── public/
 │   ├── src/
 │   └── package.json
-│
 ├── server/               # Express.js backend
 │   ├── routes/
 │   ├── models/
 │   ├── controllers/
 │   └── package.json
-│
 ├── .github/workflows/    # CI/CD pipelines
 ├── README.md
 └── package.json
+```
 
-⚙️ Installation & Setup
-Clone the repo
+## ⚙️ Installation & Setup
 
-bash
-Copy
-Edit
+1. **Clone the repo**
+
+```bash
 git clone https://github.com/keem-87/AutoLINK.git
 cd AutoLINK
-Install dependencies
+```
 
-bash
-Copy
-Edit
+2. **Install dependencies**
+
+```bash
 cd client && npm install
 cd ../server && npm install
-Set environment variables
-Create a .env file in the root directories for both client and server:
+```
 
-ini
-Copy
-Edit
+3. **Set environment variables**  
+Create a `.env` file in the root directories for both `client` and `server`:
+
+```
 MONGO_URI=your_mongo_connection
-API_KEY=your_api_key
-Run in development
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+PORT=5000
+```
 
-bash
-Copy
-Edit
+4. **Run in development**
+
+```bash
 # Run client
 cd client && npm start
 
 # Run server
 cd server && npm run dev
+```
 
-🌐 Deployment
-The project is configured for Sevalla hosting.
+## 🌐 Deployment
 
-GitHub Actions automatically triggers a build & deploy when commits are pushed to main.
+- The project is configured for Sevalla hosting.
+- GitHub Actions automatically triggers a build & deploy when commits are pushed to `main`.
+- To redeploy manually:
+  1. Log in to [Sevalla Dashboard](https://app.sevalla.com).
+  2. Select your project.
+  3. Click **Deploy Now**.
 
-To redeploy manually:
+## 📈 Roadmap
 
-Log in to Sevalla Dashboard.
+- [ ] Add AI-based deployment optimization.
+- [ ] Implement 2FA authentication.
+- [ ] Expand marketing automation features.
+- [ ] Add automated testing with Jest & Cypress.
 
-Select your project.
+## 💽 License
 
-Click "Deploy Now".
-
-📈 Roadmap
- Add AI-based deployment optimization.
-
- Implement 2FA authentication.
-
- Expand marketing automation features.
-
- Add automated testing with Jest & Cypress.
-
-📄 License
-This project is licensed under the MIT License – you are free to use, modify, and distribute it.
+This project is licensed under the **MIT License** – you are free to use, modify, and distribute it.
