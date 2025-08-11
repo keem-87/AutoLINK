@@ -24,21 +24,24 @@ React for dynamic, responsive UI.
 
 Node.js for server-side logic and integration.
 
+
 AI-Augmented CI/CD
 
-Automated builds & deployments via GitHub Actions and Sevalla.
+Automated builds and deployments via GitHub Actions and Sevalla.
 
 Security-as-Code with continuous vulnerability scanning.
 
 Real-time deployment health checks.
 
-Scalability & Performance
+
+Scalability and Performance
 
 Microservice-ready backend.
 
 Load balancing algorithms for optimized performance.
 
-Containerization support (Docker/Kubernetes-ready).
+Containerization support (Docker/Kubernetes ready).
+
 
 Security Integration
 
@@ -47,6 +50,7 @@ AI-based anomaly detection.
 Role-based authentication (future 2FA support).
 
 Secure API key management.
+
 
 Business/Marketing Automation
 
@@ -87,6 +91,7 @@ AutoLINK/
 ├── .github/workflows/    # CI/CD pipelines
 ├── README.md
 └── package.json
+
 ⚙️ Installation & Setup
 Clone the repo
 
@@ -120,6 +125,7 @@ cd client && npm start
 
 # Run server
 cd server && npm run dev
+
 🌐 Deployment
 The project is configured for Sevalla hosting.
 
