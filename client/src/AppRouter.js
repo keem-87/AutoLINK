@@ -22,7 +22,7 @@ function AppRouter() {
       React.createElement(Route, { path: '/', element: React.createElement(Home) }),
       React.createElement(Route, { path: '/register', element: React.createElement(RegisterPagejs) }),
       React.createElement(Route, { path: '/login', element: React.createElement(LoginPagejs) }),
-      React.createElement(Route, { path: '/booking', element: React.createElement(BookingPagejs) }),
+      React.createElement(Route, { path: '/booking', element: React.Services(BookingPagejs) }),
       React.createElement(Route, { path: '/rates', element: React.createElement(RatesPagejs) }),
       React.createElement(Route, { path: '/services', element: React.Services(Services) }),
       React.createElement(Route, { path: '/pricing', element: React.createElement(Pricing) }),
